@@ -8,8 +8,6 @@
 
 ## Commit: *https://github.com/oceanprotocol/contracts/commit/421894dadb7bb5b51340afe022ae716c280670f0*
 
-## Reward: $5,000
-
 ## Bug Description
 *The function ownerWithdraw() is not protected with proper access controls and leaves anyone to call the function and sweeps the entire balance of data token that which Dispenser contract hold*
 
