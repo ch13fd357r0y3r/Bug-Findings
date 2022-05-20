@@ -1,17 +1,17 @@
-# Improper Access Control on Ocean Protocol Dispenser Control
+# Improper Access Control on Ocean Protocol Dispenser Contract
 
-## Target: https://github.com/oceanprotocol/contracts/blob/v4main/contracts/pools/dispenser/Dispenser.sol
+## Target: *https://github.com/oceanprotocol/contracts/blob/v4main/contracts/pools/dispenser/Dispenser.sol*
 
 ## Severity: Medium
 
 ## Status : Fixed
 
-## Commit: https://github.com/oceanprotocol/contracts/commit/421894dadb7bb5b51340afe022ae716c280670f0
+## Commit: *https://github.com/oceanprotocol/contracts/commit/421894dadb7bb5b51340afe022ae716c280670f0*
 
 ## Reward: $5,000
 
 ## Bug Description
-The function ownerWithdraw() is not protected with proper access controls and leaves anyone to call the function and sweeps the entire balance of data token that which Dispenser contract holds.
+*The function ownerWithdraw() is not protected with proper access controls and leaves anyone to call the function and sweeps the entire balance of data token that which Dispenser contract hold*
 
 ## Permalink
 https://github.com/oceanprotocol/contracts/blob/b937a12b50dc4bdb7a6901c33e5c8fa136697df7/contracts/pools/dispenser/Dispenser.sol#L253
@@ -33,8 +33,8 @@ contract sweep {
 }
 ```
 ## Impact
-The balance is entirely transferred to the payment collector and makes "Smart contract unable to operate due to lack of token funds".
-The Token Funds are used in the dispense() function and transferred to the destination address called by users who hold the DT tokens.
+*The balance is entirely transferred to the payment collector and makes "Smart contract unable to operate due to lack of token funds".
+The Token Funds are used in the dispense() function and transferred to the destination address called by users who hold the DT tokens.*
 
 ## Recommendation
-Need to Implement Access Control.
+*Need to Implement Access Control.*
